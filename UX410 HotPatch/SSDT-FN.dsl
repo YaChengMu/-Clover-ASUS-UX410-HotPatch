@@ -21,9 +21,12 @@
 DefinitionBlock ("", "SSDT", 2, "hack", "fnkey", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)    // (from opcode)
+    External (_SB_.ALS, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.LPCB, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.LPCB.EC__, DeviceObj)    // (from opcode)
+    External (_SB_.PCI0.LPCB.EC0, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)    // (from opcode)
+    External (_SB_.ATKP, IntObj)    // (from opcode)
+    External (_SB_.ATKD.IANE, MethodObj)    // (from opcode)
 
     Scope (_SB.PCI0.LPCB.PS2K)
     {
@@ -98,7 +101,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "fnkey", 0x00000000)
         })
     }
 
-    Scope (_SB.PCI0.LPCB.EC)
+    Scope (_SB.PCI0.LPCB.EC0)
     {
         Method (_Q10, 0, NotSerialized)  // _Qxx: EC Query
         {
@@ -108,6 +111,15 @@ DefinitionBlock ("", "SSDT", 2, "hack", "fnkey", 0x00000000)
         Method (_Q11, 0, NotSerialized)  // _Qxx: EC Query
         {
             Notify (\_SB.PCI0.LPCB.PS2K, 0x0406)
+        }
+        
+        Method (_QCD, 0, NotSerialized)  // _Qxx: EC Query
+        {
+            Notify (ALS, 0x80) // Status Change
+            If (ATKP)
+            {
+                \_SB.ATKD.IANE (0xC7)
+            }
         }
     }
 }
