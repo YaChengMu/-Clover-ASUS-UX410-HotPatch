@@ -12,31 +12,15 @@
 			<dict>
 				<key>AddDTGP_0001</key>
 				<true/>
-				<key>AddHDMI_8000000</key>
-				<true/>
-				<key>AddIMEI_80000</key>
-				<true/>
-				<key>AddPNLF_1000000</key>
-				<true/>
-				<key>FIX_ACST_4000000</key>
-				<true/>
 				<key>FIX_RTC_20000</key>
 				<true/>
 				<key>FIX_TMR_40000</key>
 				<true/>
-				<key>FIX_WAK_200000</key>
-				<true/>
 				<key>FixDarwin_10000</key>
-				<true/>
-				<key>FixDisplay_0100</key>
 				<true/>
 				<key>FixHPET_0010</key>
 				<true/>
 				<key>FixIPIC_0040</key>
-				<true/>
-				<key>FixRegions_10000000</key>
-				<true/>
-				<key>FixSBUS_0080</key>
 				<true/>
 				<key>FixShutdown_0004</key>
 				<true/>
@@ -55,6 +39,90 @@
 					<key>Replace</key>
 					<data>
 					WE9TSQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SERBUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HECI to IMEI, optionally pair with SSDT-IMEI.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SEVDSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					SU1FSQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R0ZYMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					SUdQVQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change LPC to LPCB, optionally pair with SSDT-LPC.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					TFBDXw==
+					</data>
+					<key>Replace</key>
+					<data>
+					TFBDQg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA, optionally pair with SSDT-SATA.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					U0FUMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					U0FUQQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change LPC to LPCB</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					TFBDXw==
+					</data>
+					<key>Replace</key>
+					<data>
+					TFBDQg==
 					</data>
 				</dict>
 				<dict>
@@ -171,58 +239,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
+					<string>Comment: change Method(RALS,0,N) to XALS, pair with SSDT-ALS.aml</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
-					SERBUw==
+					FD1SQUxTAA==
 					</data>
 					<key>Replace</key>
 					<data>
-					SERFRg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HECI to IMEI, optionally pair with SSDT-IMEI.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					R0ZYMA==
-					</data>
-					<key>Replace</key>
-					<data>
-					SUdQVQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change LPC to LPCB</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					TFBDXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					TFBDQg==
+					FD1SQUxTAKA=
 					</data>
 				</dict>
 				<dict>
@@ -255,30 +281,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change SAT0 to SATA, optionally pair with SSDT-SATA.aml</string>
+					<string>Comment: change _Q76 to XQ76, optionally pair with SSDT-Fn.aml</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
-					U0FUMA==
+					X1EHBg==
 					</data>
 					<key>Replace</key>
 					<data>
-					U0FUQQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					R1BSVwI=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFBSVwI=
+					WFEHBg==
 					</data>
 				</dict>
 				<dict>
@@ -297,30 +309,30 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_PTS,1,S) to ZPTS, pair with SSDT-PTSWAK.aml</string>
+					<string>change Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1BUUwk=
+					X1dBSwE=
 					</data>
 					<key>Replace</key>
 					<data>
-					WlBUUwk=
+					WldBSwE=
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change LPC to LPCB, optionally pair with SSDT-EHCI_Disable.aml, SSDT-LPC.aml</string>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					TFBDXw==
+					R1BSVwI=
 					</data>
 					<key>Replace</key>
 					<data>
-					TFBDQg==
+					WFBSVwI=
 					</data>
 				</dict>
 			</array>
@@ -363,45 +375,32 @@
 				<key>PStates</key>
 				<false/>
 			</dict>
-			<key>PluginType</key>
-			<string>1</string>
 		</dict>
-		<key>SortedOrder</key>
-		<array>
-			<string>SSDT-BATT.aml</string>
-			<string>SSDT-Config.aml</string>
-			<string>SSDT-FN.aml</string>
-			<string>SSDT-HDEF.aml</string>
-			<string>SSDT-IGPU.aml</string>
-			<string>SSDT-PluginType1.aml</string>
-			<string>SSDT-PNLF.aml</string>
-			<string>SSDT-GPRW.aml</string>
-			<string>SSDT-SATA.aml</string>
-			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-LPC.aml</string>
-			<string>SSDT-EN0.aml</string>
-			<string>SSDT-PTSWAK.aml</string>
-			<string>SSDT-XHC.aml</string>
-			<string>SSDT-Disable_DGPU.aml</string>
-			<string>SSDT-ALS0.aml</string>
-		</array>
 		<key>SortedOrder-Comment</key>
 		<string>This is the original ordernecessary.</string>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 rootless=0 -disablegfxfirmware abm_firstpolldelay=30000 -igfxbeta -lilubeta -alcbeta</string>
+		<string>darkwake=0 kext-dev-mode=1 rootless=0 -disablegfxfirmware abm_firstpolldelay=30000 -igfxbeta -lilubeta -alcbeta -hbfx-dump-nvram -hbfx-patch-pci</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
 		<string>OS</string>
+		<key>HibernationFixup</key>
+		<true/>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
+		<key>LegacyBiosDefaultEntry</key>
+		<integer>0</integer>
 		<key>Log</key>
 		<false/>
+		<key>NeverHibernate</key>
+		<true/>
 		<key>Secure</key>
 		<false/>
+		<key>SkipHibernateTimeout</key>
+		<true/>
 		<key>Timeout</key>
 		<integer>3</integer>
 		<key>XMPDetection</key>
@@ -467,7 +466,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>BGM</string>
+		<string>EI Capitan</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -495,14 +494,48 @@
 		<false/>
 		<key>KernelCpu</key>
 		<true/>
-		<key>KernelHaswellE</key>
-		<false/>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
 		<true/>
+		<key>KernelXCPM</key>
+		<false/>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.0</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				iUXIOcZ2UQ==
+				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>
+				iUXIOcbrUQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>eDP,0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAEAAA=
+				</data>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>
+				AAAIAAAEAACYAAAAAQUJAAAEAAA=
+				</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
@@ -549,6 +582,38 @@
 				<key>Replace</key>
 				<data>
 				AQAA6yU=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x19160000/etc, 19MB framebuffer 9MB</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AAAgAgAAUAE=
+				</data>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>
+				AAAwAQAAkAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable lid wake for 0x19260002</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				ChMDAAAABgAAAAAAAAAAAA==
+				</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>
+				DxMDAAAABgAAAAAAAAAAAA==
 				</data>
 			</dict>
 		</array>
