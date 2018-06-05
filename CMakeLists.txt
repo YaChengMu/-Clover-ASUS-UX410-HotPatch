@@ -86,7 +86,7 @@ SET_TARGET_PROPERTIES(mariabackup PROPERTIES ENABLE_EXPORTS TRUE)
 ADD_SUBDIRECTORY(crc)
 
 
-TARGET_LINK_LIBRARIES(mariabackup sql crc)
+TARGET_LINK_LIBRARIES(mariabackup sql crc ${LIBRT})
 
 IF(NOT HAVE_SYSTEM_REGEX)
   TARGET_LINK_LIBRARIES(mariabackup pcreposix)
@@ -110,7 +110,7 @@ MYSQL_ADD_EXECUTABLE(mbstream
 
 TARGET_LINK_LIBRARIES(mbstream
   mysys
-  crc
+  crc ${LIBRT}
 )
 ADD_DEPENDENCIES(mbstream GenError)
 
